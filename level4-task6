@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int N, eded, max, min;
+    double cem = 0;
+
+    cout << "Neçə ədəd daxil edəcəksiniz? ";
+    cin >> N;
+
+    if (N <= 0) {
+        cout << "Ədəd sayı müsbət olmalıdır.";
+        return 0;
+    }
+
+    cout << "1-ci ədədi daxil et: ";
+    cin >> eded;
+    max = min = eded;
+    cem += eded;
+
+    for (int i = 2; i <= N; i++) {
+        cout << i << "-ci ədədi daxil et: ";
+        cin >> eded;
+
+        if (eded > max) max = eded;
+        if (eded < min) min = eded;
+        cem += eded;
+    }
+
+    cout << "Ən böyük ədəd: " << max << endl;
+    cout << "Ən kiçik ədəd: " << min << endl;
+    cout << "Ortalama: " << cem / N << endl;
+
+    return 0;
+}
