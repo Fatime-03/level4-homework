@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int n, s = 0;
+    cout << "Ədədi daxil et: ";
+    cin >> n;
+
+    for (int i = 1; i <= n; i++) {
+        if (n % i == 0) {
+            s++;
+        }
+    }
+
+    cout << "Tam bölənlərin sayı: " << s;
+
+    return 0;
+}
