@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int a, t, r= 0,d   ; cout << "Eded daxil edin: ";
+    cin >> a;
+
+    t = a;
+    while (t > 0) {
+        d = t % 10;
+        r= r *10 + d;
+        t /= 10;
+    }
+
+    if (a == r)
+        cout << a << " polidrom ədəddir.\n";
+    else
+        cout << a << " polidrom ədəd deyil.\n";
+
+    return 0;
+}
