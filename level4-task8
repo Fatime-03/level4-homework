@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int n;
+    cout << "Ədədi daxil et: ";
+    cin >> n;
+
+    if (n == 0) {
+        cout << "Binary: 0";
+        return 0;
+    }
+
+    string b= "";
+    while (n > 0) {
+        b= char(n % 2 + '0') + b;
+        n /= 2;
+    }
+
+    cout << "Binary: " << b;
+    return 0;
+}
